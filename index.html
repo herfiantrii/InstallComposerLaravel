@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dokumentasi Install Composer dan Laravel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            text-align: center;
+            background-color: #fff;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        ul {
+            margin-left: 20px;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        span.highlight {
+            background-color: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 4px;
+            color: red;
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #009688;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>Dokumentasi Install Composer dan Laravel</h1>
+        <p>Herfian Muhammad Nur Fattah Putra Setya Aji | 2201002 | 3A PSTI</p>
+    </header>
+
+    <nav>
+        <a href="#install-composer">Install Composer</a> |
+        <a href="#install-laravel">Install Laravel</a>
+    </nav>
+
+    <div id="install-composer" class="content">
+        <h2>Install Composer</h2>
+        <p>Composer merupakan sebuah aplikasi package manager untuk menginstall berbagai file PHP, terutama library dan framework PHP. Package manager sendiri adalah sebutan untuk aplikasi yang bertugas mengelola dependency atau ketergantungan antar aplikasi. Composer terinspirasi dari npm (singkatan dari Node Package Manager), yakni aplikasi package manager yang lebih dahulu hadir untuk bahasa pemrograman JavaScript.</p>
+
+        <p>Menginstall Composer sama seperti proses instalasi program lain. Donwload file installer dari web resminya di <a href="https://getcomposer.org/download/">Getcomposer.org</a>. Untuk mulai proses instalasi double klik file Composer-Setup.exe. Di jendela pertama, biarkan checkbox Developer mode kosong dan langsung saja klik tombol Next.</p>
+        <img src="1.png" alt="Gambar 1">
+
+        <p>Composer akan mencari di mana file php.exe berada, klik tombol Next.</p>
+        <img src="2.png" alt="Gambar 2">
+
+        <p>Untuk jendela inputan proxy tidak perlu diisi dan langsung saja klik tombol Next.</p>
+        <img src="3.png" alt="Gambar 3">
+
+        <p>Kemudian klik tombol Install. Tunggu beberapa saat, klik tombol Next dan Finish. Maka composer sudah sukses terinstall.</p>
+        <img src="4.png" alt="Gambar 4">
+
+        <p>Untuk memeriksa apakah composer sudah berhasil di install atau tidak, buka cmd, ketik composer dan tekan Enter. Jika sukses menginstall, composer akan muncul tampilan text di bawah ini:</p>
+        <img src="5.png" alt="Gambar 5">
+    </div>
+
+    <div id="install-laravel" class="content">
+        <h2>Install Laravel</h2>
+        <p>Laravel adalah satu-satunya framework yang membantu untuk memaksimalkan penggunaan PHP di dalam proses pengembangan website. PHP menjadi bahasa pemrograman yang sangat dinamis, tetapi sejak adanya Laravel menjadi lebih powerful, cepat, aman, dan simple. Dalam dokumentasi resmi Laravel dijelaskan bahwa terdapat 2 cara instalasi Laravel. Pertama dengan perintah composer create-project, dan yang kedua dengan laravel installer. Berikut adalah tahapan install laravel menggunakan composer create-project.</p>
+
+        <p>Silahkan buka cmd lalu pindah ke folder htdocs XAMPP dengan perintah:<br><br><code>cd C:\xampp\htdocs</code></p>
+        <img src="6.png" alt="Gambar 6">
+
+        <p>Kemudian ketik atau copy perintah berikut:</p>
+        <code>composer create-project --prefer-dist laravel/laravel belajar_laravel</code>
+        <p>Perintah ini terdiri dari beberapa bagian:</p>
+        <ul>
+            <li><span class="highlight">composer</span> : menjalankan composer</li>
+            <li><span class="highlight">create-project</span> : membuat sebuah proyek</li>
+            <li><span class="highlight">--prefer-dist</span> : memilih versi stabil terbaru dari framework Laravel</li>
+            <li><span class="highlight">belajar_laravel</span> : menyimpan semua file proyek ke dalam folder belajar_laravel, ini adalah nama proyek yang akan dibuat, silahkan disesuaikan dengan keinginan.</li>
+        </ul>
+        <img src="7.png" alt="Gambar 7">
+
+        <p>Jika teks "Application key set successfully" muncul, dan kursor kembali ke C:\xampp\htdocs, berarti proses instalasi Laravel telah selesai.</p>
+        <img src="8.png" alt="Gambar 8">
+
+        <p>Untuk mengakses Laravel, buka cmd dan masuk ke folder instalasi Laravel:</p>
+        <code>cd C:\xampp\htdocs\belajar_laravel</code>
+        <p>Saat berada di dalam folder Laravel, jalankan web server dengan perintah berikut dan tekan enter:<br><br><code>php artisan serve</code></p>
+        <img src="9.png" alt="Gambar 9">
+
+        <p>Jika teks "Server running on [http://127.0.0.1:8000]" muncul, server aktif dan dapat diakses. Buka web browser dan masukkan alamat http://127.0.0.1:8000</p>
+        <div style="text-align: center;">
+            <img src="10.png" alt="Gambar 10" width="75%" height="50%">
+        </div>
+
+        <p>Selanjutnya, lihat apa saja yang ada di dalam folder Laravel:</p>
+        <img src="11.png" alt="Gambar 11">
+        <p>Berikut penjelasan singkat dari isi setiap folder Laravel:</p>
+        <ul>
+            <li><span class="highlight">App</span> : berisi berbagai file untuk aplikasi yang akan di bangun. Dalam folder inilah nantinya kita membuat controller dan model.</li>
+            <li><span class="highlight">Bootstrap</span> : berisi file app.php yang berfungsi sebagai bootstrap atau file pengaturan awal dari Laravel. Selain itu terdapat juga folder cache untuk meningkatkan performa aplikasi. Sebagai info tambahan, nama folder ini tidak ada kaitannya dengan framework CSS Bootstrap. Dalam istilah komputer, bootstrap memiliki makna yang sama dengan booting yakni proses awal dari sebuah aplikasi.</li>
+            <li><span class="highlight">Config</span> : berisi berbagai file konfigurasi Laravel. Folder ini cukup sering kita akses karena di sinilah berbagai pengaturan Laravel tersimpan.</li>
+            <li><span class="highlight">Database</span> : berisi folder dan file yang ‘mengurusi’ database seperti migrations, factories dan seeds. Folder database ini juga bisa dipakai sebagai tempat menyimpan file tabel database SQLite (jika anda menggunakan SQLite).</li>
+            <li><span class="highlight">Public</span> : berisi file index.php sebagai file awal dari semua request ke aplikasi Laravel. File index.php inilah yang nanti memanggil berbagai file-file lain. Namun kita tidak akan meng-edit file index.php ini secara langsung.</li>
+            <li><span class="highlight">Resource</span> : berisi file resource ‘mentah’ seperti file CSS dan JavaScript. Di sini juga nantinya kita membuat view.</li>
+            <li><span class="highlight">Routes</span> : berisi file yang akan menangani proses routing.</li>
+            <li><span class="highlight">Storage</span> : berisi tempat penyimpanan file yang di generate oleh Laravel, seperti file log. Jika kita membuat form upload, file tersebut juga bisa disimpan di sini.</li>
+            <li><span class="highlight">Test</span> : berisi file untuk proses testing seperti PHPUnit.</li>
+            <li><span class="highlight">Vendor</span> : Berisi berbagai file internal framework Laravel. Di sinilah semua library dependency Laravel berada. Folder vendor ini mencakup 90% ukuran framework laravel (33MB yang terdiri lebih dari 8000an file). Meskipun berisi banyak file, folder ini tidak perlu kita utak-atik.</li>
+        </ul>
+    </div>
+</body>
+
+</html>
